@@ -49,4 +49,6 @@
     <string name="answer">Antwort</string>
     <string name="check">Prüfen</string>
     <string name="exit_test">Test abbrechen</string>
+    <string name="word_in_german">Wort in Deutsch</string>
+    <string name="word_in_english">Wort in Englisch</string>
 </resources>
