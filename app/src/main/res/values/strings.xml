@@ -44,4 +44,6 @@
     </string>
     <string name="add_vocable">Vokabel hinzufügen</string>
     <string name="exit_editing">Editieren abbrechen</string>
+    <string name="start_test">Vokabeltest starten</string>
+    <string name="edit_vocables">Vokabeln editieren</string>
 </resources>

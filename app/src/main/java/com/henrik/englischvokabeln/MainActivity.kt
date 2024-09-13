@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        addVocableView = findViewById(R.id.addVocabelsView)
-        testVocableView = findViewById(R.id.testVocabelsView)
+        addVocableView = findViewById(R.id.addVocablesView)
+        testVocableView = findViewById(R.id.testVocablesView)
         editVocableView = findViewById(R.id.editVocablesView)
         vocableListViewGer = findViewById(R.id.viewVocableListGer)
         vocableListViewEng = findViewById(R.id.viewVocableListEng)

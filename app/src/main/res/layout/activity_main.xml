@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/addVocabelsView"
+            android:id="@+id/addVocablesView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -26,14 +26,14 @@
             app:srcCompat="@android:drawable/ic_input_add" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/testVocabelsView"
+            android:id="@+id/testVocablesView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="16dp"
             android:clickable="true"
-            android:contentDescription="Vokabeltest starten"
+            android:contentDescription="@string/start_test"
             android:focusable="true"
             app:backgroundTint="#4CAF50"
             app:srcCompat="@android:drawable/ic_media_play" />
@@ -42,11 +42,13 @@
             android:id="@+id/editVocablesView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginRight="86dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="86dp"
             android:layout_marginBottom="16dp"
             android:clickable="true"
-            app:backgroundTint="#FF9800"
+            android:contentDescription="@string/edit_vocables"
+            android:focusable="true"
+            app:backgroundTint="#FF3D00"
             app:srcCompat="@android:drawable/ic_menu_edit" />
 
         <LinearLayout
