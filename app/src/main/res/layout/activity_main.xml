@@ -23,6 +23,7 @@
             android:contentDescription="@string/add_vocable"
             android:focusable="true"
             app:backgroundTint="#009688"
+            app:tint="@color/black"
             app:srcCompat="@android:drawable/ic_input_add" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -30,12 +31,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
             android:clickable="true"
             android:contentDescription="@string/start_test"
             android:focusable="true"
             app:backgroundTint="#4CAF50"
+            app:tint="@color/black"
             app:srcCompat="@android:drawable/ic_media_play" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -48,7 +50,8 @@
             android:clickable="true"
             android:contentDescription="@string/edit_vocables"
             android:focusable="true"
-            app:backgroundTint="#FF3D00"
+            app:backgroundTint="#FFC400"
+            app:tint="@color/black"
             app:srcCompat="@android:drawable/ic_menu_edit" />
 
         <LinearLayout
