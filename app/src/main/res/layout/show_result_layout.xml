@@ -8,24 +8,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:height="48dp"
-            android:text="Richtig übersetzt"
+            android:text="@string/correct_translated"
             android:textSize="20sp" />
 
         <EditText
             android:id="@+id/resultPositivView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:height="48dp"
-            android:editable="true"
-            android:minWidth="60dp"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:autofillHints="@string/correct_translated"
+            android:inputType="text"
+            android:hint="@string/correct_translated"
             android:textColor="#009688"
             android:textSize="20sp" />
 
@@ -39,20 +39,20 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:height="48dp"
-            android:text="Falsch übersetzt"
+            android:text="@string/wrong_translated"
             android:textSize="20sp" />
 
         <EditText
             android:id="@+id/resultNegativeView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:height="48dp"
-            android:editable="true"
-            android:minWidth="60dp"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:autofillHints="@string/wrong_translated"
+            android:inputType="text"
+            android:hint="@string/wrong_translated"
             android:textColor="#E91E63"
             android:textSize="20sp" />
     </LinearLayout>

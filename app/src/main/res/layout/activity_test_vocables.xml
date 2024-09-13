@@ -46,7 +46,7 @@
                 android:focusable="auto"
                 android:focusableInTouchMode="true"
                 android:hint="@string/answer"
-                android:inputType="text"
+                android:inputType="textNoSuggestions"
                 android:textSize="34sp" />
 
             <Button

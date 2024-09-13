@@ -55,4 +55,7 @@
     <string name="remove_vocable">Vokabel von der Liste entfernen</string>
     <string name="text_in_german">Text in Deutsch</string>
     <string name="text_in_english">Text in Englisch</string>
+    <string name="correct_translated">Richtig übersetzt</string>
+    <string name="wrong_translated">Falsch übersetzt</string>
+    <string name="test_size_default">Test Größe (10)</string>
 </resources>
