@@ -6,17 +6,26 @@
 
     <EditText
         android:id="@+id/resultPositivView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:autofillHints="@string/word_in_german"
         android:height="48dp"
-        android:hint="Wort in Deutsch"
-        android:textSize="20sp" />
+        android:hint="@string/word_in_german"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/cardview_dark_background" />
 
     <EditText
         android:id="@+id/resultNegativeView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:autofillHints="@string/word_in_english"
         android:height="48dp"
-        android:hint="Wort in Englisch"
-        android:textSize="20sp" />
+        android:hint="@string/word_in_english"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@color/cardview_dark_background" />
 </LinearLayout>
