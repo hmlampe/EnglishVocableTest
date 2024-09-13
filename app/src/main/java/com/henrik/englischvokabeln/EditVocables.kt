@@ -7,9 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatImageButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -45,15 +48,13 @@ class EditVocables : AppCompatActivity() {
     }
 }
 
-class MyAdapter(context: Context, private val data: List<VocablesData>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
-
-    private val context = context
+class MyAdapter(private val context: Context, private val data: List<VocablesData>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView1: TextView = itemView.findViewById(R.id.textView1)
         val textView2: TextView = itemView.findViewById(R.id.textView2)
-        val button1: Button = itemView.findViewById(R.id.button1)
-        val button2: Button = itemView.findViewById(R.id.button2)
+        val button1: AppCompatImageButton = itemView.findViewById(R.id.imageButton1)
+        val button2: AppCompatImageButton = itemView.findViewById(R.id.imageButton2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -66,8 +67,11 @@ class MyAdapter(context: Context, private val data: List<VocablesData>) : Recycl
         val item = data[position]
         holder.textView1.text = item.getGerman()
         holder.textView2.text = item.getEnglish()
+
         holder.button1.setOnClickListener {
-            // Handle button1 click
+            showEditVocableDialog(context, item, position)
+            holder.textView1.text = item.getGerman()
+            holder.textView2.text = item.getEnglish()
         }
         holder.button2.setOnClickListener {
             VocableListData.removeVocable(context, item)
@@ -77,5 +81,29 @@ class MyAdapter(context: Context, private val data: List<VocablesData>) : Recycl
 
     override fun getItemCount(): Int {
         return data.size
+    }
+
+    private fun showEditVocableDialog(context: Context, vocable: VocablesData, position: Int) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Vokabel ändern")
+        val view = LayoutInflater.from(context).inflate(R.layout.edit_vocable_layout, null)
+        builder.setView(view)
+        val textGerman = view.findViewById<TextView>(R.id.textViewGerman)
+        val textEnglish = view.findViewById<TextView>(R.id.textViewEnglish)
+        textGerman.requestFocus()
+        textGerman.text = vocable.getGerman()
+        textEnglish.text = vocable.getEnglish()
+        builder.setPositiveButton("Speichern") { dialog, _ ->
+            vocable.setGerman(textGerman.text.toString())
+            vocable.setEnglish(textEnglish.text.toString())
+            VocableListData.writeFile(context)
+            notifyItemChanged(position)
+            dialog.dismiss()
+        }
+        builder.setNegativeButton("Abbrechen") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }

@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:height="48dp"
                 android:text="TextView"
-                android:textSize="20sp" />
+                android:textSize="34sp" />
 
             <TextView
                 android:id="@+id/textAnswer"
@@ -46,7 +46,7 @@
                 android:focusable="auto"
                 android:focusableInTouchMode="true"
                 android:hint="Antwort"
-                android:textSize="20sp" />
+                android:textSize="34sp" />
 
             <Button
                 android:id="@+id/button2"
