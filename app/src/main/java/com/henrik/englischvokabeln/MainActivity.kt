@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         val testSize = view.findViewById<EditText>(R.id.resultPositivView)
         testSize.requestFocus()
         builder.setPositiveButton("Test starten") { dialog, _ ->
-            var size: Int = 10
+            var size = 10
             if (testSize.text.toString() != "") {
                 size = testSize.text.toString().toInt()
             }
