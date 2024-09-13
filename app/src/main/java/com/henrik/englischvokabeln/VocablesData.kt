@@ -6,7 +6,7 @@ import android.content.Context.MODE_PRIVATE
 import java.io.OutputStreamWriter
 import java.io.PrintWriter
 
-class VocablesData(private val german: String, private val english: String) {
+class VocablesData(private var german: String, private var english: String) {
 
     var asked : Int = 0
     var correct : Int = 0
@@ -35,6 +35,14 @@ class VocablesData(private val german: String, private val english: String) {
 
     fun getScore(): Int {
         return correct - wrong
+    }
+
+    fun setGerman(german: String) {
+        this.german = german
+    }
+
+    fun setEnglish(english: String) {
+        this.english = english
     }
 
 }

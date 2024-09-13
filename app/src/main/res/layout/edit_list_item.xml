@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="5dp">
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:text="TextView 1"
+        android:text="Deutsch"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -18,26 +20,27 @@
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:text="TextView 2"
+        android:text="Englisch"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button1"
+    <ImageButton
+        android:id="@+id/imageButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFC107"
-        android:text="Ändern"
-        android:textColorLink="#FFC107"
-        android:textSize="20sp" />
+        android:layout_marginEnd="10dp"
+        android:contentDescription="Vokabel bearbeiten"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
-    <Button
-        android:id="@+id/button2"
+    <ImageButton
+        android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#E91E63"
-        android:text="Löschen"
-        android:textColorLink="#E91E63"
-        android:textSize="20sp" />
+        android:contentDescription="Vokabel von der Liste entfernen"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
 </LinearLayout>
