@@ -10,22 +10,28 @@
 
         <EditText
             android:id="@+id/textViewGerman"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
             android:layout_marginTop="5dp"
-            android:editable="true"
-            android:text="TextView"
-            android:textSize="20sp" />
+            android:autofillHints="Text in Deutsch"
+            android:inputType="text"
+            android:hint="@string/text_in_german"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@color/cardview_dark_background"  />
 
         <EditText
             android:id="@+id/textViewEnglish"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:editable="true"
-            android:text="TextView"
-            android:textSize="20sp" />
+            android:autofillHints="Text in Englisch"
+            android:hint="@string/text_in_english"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@color/cardview_dark_background" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
