@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:text="Deutsch"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -22,7 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:text="Englisch"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -31,8 +29,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFC107"
+        app:tint="@color/black"
         android:layout_marginEnd="10dp"
-        android:contentDescription="Vokabel bearbeiten"
+        android:contentDescription="@string/edit_vocable"
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageButton
@@ -40,7 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#E91E63"
-        android:contentDescription="Vokabel von der Liste entfernen"
+        app:tint="@color/black"
+        android:contentDescription="@string/remove_vocable"
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
 </LinearLayout>
