@@ -43,4 +43,5 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="add_vocable">Vokabel hinzufügen</string>
+    <string name="exit_editing">Editieren abbrechen</string>
 </resources>
